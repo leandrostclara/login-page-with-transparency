@@ -136,6 +136,7 @@
     text-decoration: underline;
 }
 
-.login-box input:focus ~ label {
+.login-box input:focus ~ label,
+.login-box input:valid ~ label {
     top: -5px;
 }
