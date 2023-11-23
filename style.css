@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color: #fff; */
+    color: #fff;
     font-family: "Poppins", sans-serif;
 }
 
@@ -14,11 +14,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background: url(./bg.jpg) center center no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .login-box {
-    background-color: lightcoral;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
     width: 400px;
     height: 450px;
     display: flex;
@@ -26,4 +29,106 @@
     align-items: center;
     border-radius: 20px;
     border: solid 2px #fff;
+}
+
+.login-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box {
+    width: 310px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 310px;
+    height: 40px;
+    padding: 0 5px;
+    border: none;
+    border-bottom: solid 2px #fff;
+    outline: none;
+    font-size: 17px;
+    padding-right: 35px;
+    background: transparent;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-weight: 500;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .2s ease-in-out;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.remember-forgot label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-box button {
+    margin: 10px 0 20px 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    color: #000;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.login-box .register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box .register p {
+    margin-right: 5px;
+}
+
+.login-box .register a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-box .register a:hover {
+    text-decoration: underline;
+}
+
+.login-box input:focus ~ label {
+    top: -5px;
 }
